@@ -2,15 +2,19 @@
     <head>
         <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
         <meta content="utf-8" http-equiv="encoding">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/peerjs/0.3.9/peer.min.js"></script>
     </head>
     <body>
-        <textarea id="JS" rows="10" cols="50"></textarea>
-        <br>
-        <button type="button" id="but">Send JS</button>
+        <div id="rps_buttons" hidden="true">
+            <button type="button">Rock</button>
+            <button type="button">Paper</button>
+            <button type="button">Scissors</button>
+        </div>
+        <button id="but" type="button">Show</button>
         <script>
             var send = function() {
-                eval(document.getElementById('JS').value);
+                document.getElementById('rps_buttons').show();
+                document.getElementById('but').hide();
             }
             document.getElementById('but').addEventListener('click',send);
         </script>
