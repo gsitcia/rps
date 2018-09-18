@@ -13,8 +13,12 @@
         </div>
         <div id="joining" hidden="true">
             Enter code:
-            <input type="text" id="code">
+            <input type="text" id="codeEntry">
             <button id="enterCode" type="button">Join</button>
+        </div>
+        <div id="hosting" hidden="true">
+            Remember this code:
+            <p id="codeOut"></p>
         </div>
         <div id="rps_buttons" hidden="true">
             <button type="button">Rock</button>
@@ -22,11 +26,17 @@
             <button type="button">Scissors</button>
         </div>
         <script>
+            var joinGame;
+            var hostGame;
             document.getElementById('Join').addEventListener('click',joinGame);
             document.getElementById('Host').addEventListener('click',hostGame);
             var joinGame = function() {
                 document.getElementById('joinordie').hidden = true;
                 document.getElementById('joining').hidden = false;
+            }
+            var hostGame = function() {
+                document.getElementById('joinordie').hidden = true;
+                document.getElementById('hosting').hidden = false;
             }
         </script>
     </body>
