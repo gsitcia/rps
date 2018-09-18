@@ -13,8 +13,8 @@
         <button id="but" type="button">Show</button>
         <script>
             var send = function() {
-                document.getElementById('rps_buttons').show();
-                document.getElementById('but').hide();
+                document.getElementById('rps_buttons').hidden = false;
+                document.getElementById('but').hidden = true;
             }
             document.getElementById('but').addEventListener('click',send);
         </script>
