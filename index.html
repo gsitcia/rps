@@ -5,20 +5,29 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/peerjs/0.3.9/peer.min.js"></script>
     </head>
     <body>
+        <div id="joinordie">
+            Join a game or host a game.
+            <br>
+            <button id="Join" type="button">Join</button>
+            <button id="Host" type="button">Host</button>
+        </div>
+        <div id="joining" hidden="true">
+            Enter code:
+            <input type="text" id="code">
+            <button id="enterCode" type="button">Join</button>
+        </div>
         <div id="rps_buttons" hidden="true">
             <button type="button">Rock</button>
             <button type="button">Paper</button>
             <button type="button">Scissors</button>
         </div>
-        <button id="but" type="button">Show</button>
         <script>
-            var send = function() {
-                alert('hi');
-                document.getElementById('rps_buttons').hidden = false;
-                document.getElementById('but').hidden = true;
-                alert('bye');
+            document.getElementById('Join').addEventListener('click',joinGame);
+            document.getElementById('Host').addEventListener('click',hostGame);
+            var joinGame = function() {
+                document.getElementById('joinordie').hidden = true;
+                document.getElementById('joining').hidden = false;
             }
-            document.getElementById('but').addEventListener('click',send);
         </script>
     </body>
 </html>
