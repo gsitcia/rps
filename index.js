@@ -102,7 +102,7 @@ resetGame = function() {
     var output = 'You lost! ';
     var beats = {'rock':'paper','scissors':'rock','paper':'scissors'};
     if (yourChoice == theirChoice) {
-        output = 'You tied!';
+        output = 'You tied! ';
     }
     if (yourChoice == beats[theirChoice]) {
         output = 'You won! ';
